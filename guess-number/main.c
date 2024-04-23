@@ -6,13 +6,12 @@ int main() {
     time_t t;
     srand((unsigned) time(&t));
     int randomNumber = rand() % 21;
-    int timesToGuess = 5;
     int enteredNumber;
-    int currentRound = 5;
+    int currentRound;
 
     printf("Welcome to guess the number game I guessed a number between 0-20, good luck on trying. \n");
 
-    for (int i = 0; i < timesToGuess; ++i) {
+    for (currentRound = 5; currentRound > 0; --currentRound) {
         printf("You have %d rounds left \n", currentRound);
         printf("Enter a number: ");
         scanf("%d", &enteredNumber);
@@ -28,7 +27,6 @@ int main() {
         if (enteredNumber < randomNumber) {
             printf("the number you guessed was to low \n");
         }
-        --currentRound;
     }
 
 

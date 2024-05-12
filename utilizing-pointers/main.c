@@ -15,7 +15,7 @@ int main() {
     pNum = &num2;
     ++*pNum;
 
-    printf("num1 = %ld num2 = %ld *pnum = %ld *pnum + num2 = %ld", num1, num2, *pNum, *pNum + num2);
+    printf("num1 = %ld num2 = %ld *pnum = %ld *pnum + num2 = %ld \n", num1, num2, *pNum, *pNum + num2);
 
     // ----------------- next lesson -----------------
     int test = 1;
@@ -32,6 +32,14 @@ int main() {
      * */
     int *const pTest2 = &test;
 //    pTest2 = &test2;
+
+    // ----------------- next lesson -----------------
+
+    int val[100] = {1};
+    int *pVal;
+    // assigning the first value of the array to a pointer (1).
+    pVal = val;
+    printf("first val of the pointer %d", *pVal);
 
     return 0;
 }

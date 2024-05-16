@@ -56,6 +56,29 @@ int main() {
     free(pString);
     pString = NULL;
 
+
+    // ---------------- CHALLENGE ----------------
+    char *pEnteredString = NULL;
+    int enteredSize = 0;
+
+    printf("Please enter the size of the string that will be inputted: \n");
+    scanf("%d", &enteredSize);
+
+    // Allocate memory for the string after knowing the size
+    pEnteredString = malloc((enteredSize + 1) * sizeof(char));  // +1 for the null terminator
+    if (!pEnteredString) {
+        fprintf(stderr, "Memory allocation failed.\n");
+        return -1;
+    }
+
+    printf("Please enter a string: \n");
+    scanf("%s", pEnteredString);  // Unsafe: should use a limit, see below for a safer alternative
+
+    printf("Entered String: %s \n", pEnteredString);
+    printf("Entered size: %d \n", enteredSize);
+
+    free(pEnteredString);  // Free the allocated memory
+
     return 0;
 }
 

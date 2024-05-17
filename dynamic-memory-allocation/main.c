@@ -72,7 +72,7 @@ int main() {
     }
 
     printf("Please enter a string: \n");
-    scanf("%s", pEnteredString);  // Unsafe: should use a limit, see below for a safer alternative
+    scanf("%s", pEnteredString);
 
     printf("Entered String: %s \n", pEnteredString);
     printf("Entered size: %d \n", enteredSize);

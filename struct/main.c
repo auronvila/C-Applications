@@ -19,7 +19,7 @@ int main() {
 
     // --------------- Challenge ---------------
     struct employee {
-        char name[100];  // Array to hold the name
+        char name[100];
         int hireDate;
         float salary;
     };

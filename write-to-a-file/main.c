@@ -2,11 +2,14 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdlib.h>
+#include "cs50.h"
 
 int main() {
     char *pNodeAuthToken;
     // getenv returns a pointer to the string value of the environment variable
     pNodeAuthToken = getenv("NODE_AUTH_TOKEN");
+    string name = get_string("What is your name");
+    printf("%s",name);
 
     // Check if the environment variable exists
     if (pNodeAuthToken != NULL) {
